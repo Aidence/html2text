@@ -12,6 +12,7 @@ UNRELEASED
 * Fix #320 padding empty tables and tables with no </tr> tags.
 * Add ``ignore_mailto_links`` config option to ignore ``mailto:`` style links.
 * Feature #198: Ignore ``<p>`` and ``<div>`` tags inside table rows.
+* Fix: keep <br> tag inside a table cell.
 
 2020.1.16
 =========

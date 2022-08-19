@@ -376,6 +376,9 @@ class HTML2Text(html.parser.HTMLParser):
         if tag == "br" and start:
             if self.astack:
                 self.space = True
+            elif self.split_next_td:
+                # keep <br> tag inside a table (\n breaks the table syntax)
+                self.o("<br>")
             elif self.blockquote > 0:
                 self.o("  \n> ")
             else:
